@@ -17,7 +17,7 @@ webpack-dev-server  // 개발 서버 제공
 webpack-merge // 여러개 config 파일 구분해놓고 합쳐서 쓰기 위해서
 ```
 
-1. **필요한 webpack 로더, 플러그인 설치**
+2. **필요한 webpack 로더, 플러그인 설치**
 
 ```jsx
 yarn add -D 
@@ -27,7 +27,7 @@ html-webpack-plugin // 템플릿을 지정하거나, favicon 을 설정하기 �
 webpack-progress-plugin // webpack 번들 진행과정 확인을 위해
 ```
 
-1. **필요한 babel preset 설치** 
+3. **필요한 babel preset 설치** 
 
 리액트를 사용할것이기 때문에 최신 자바스크립트 문법(ES6), JSX 문법으로 작성된 코드를 ES5 문법으로 변환해주기 위한 바벨 로더들을 설치합니다. (구버전 웹 브라우저와 호환하기 위해서)
 
@@ -51,7 +51,7 @@ yarn add -D
 // plugin : 규칙 하나를 미세하게 적용할 때 
 ```
 
-1. **웹팩 설정 파일 만들기** 
+4. **웹팩 설정 파일 만들기** 
 
 웹팩 설정을 개발용(development) 와 배포 (production) 용으로 나누어 적용하기 위해 webpack merge 를 사용해보겠습니다.
 
@@ -136,7 +136,7 @@ module.exports = merge(common, {
 })
 ```
 
-1. 리액트 관련 의존성 설치, index.js, App.js index.html 파일 작성
+5. 리액트 관련 의존성 설치, index.js, App.js index.html 파일 작성
 - src/App.js
 
 ```jsx
@@ -176,7 +176,7 @@ root.render(<App tab="home" />);
 </html>
 ```
 
-1. package.json 에 개발서버 실행, 배포 실행 script 추가
+6. package.json 에 개발서버 실행, 배포 실행 script 추가
 
 ```jsx
 "scripts": {
@@ -186,3 +186,6 @@ root.render(<App tab="home" />);
 ```
 
  을 추가하고 yarn dev를 입력하면 리액트가 실행되는 것을 확인할 수 있다!!
+
+
+## [관련 개념을 포스팅한 블로그 글](https://velog.io/@aeong98/Module-Webpack-%EC%9D%B4%EB%9E%80-React-webpack-%EC%84%A4%EC%A0%95-%EC%A7%81%EC%A0%91%ED%95%B4%EB%B3%B4%EA%B8%B0)
